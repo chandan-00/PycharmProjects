@@ -1,0 +1,31 @@
+{% extends 'webapp/base.html' %}
+{% block title %}List website{% endblock %}
+{% block body %}
+<p>{{ls.name}}</p>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    {{ls.name}}
+</button>
+<form method="post" action="#">
+    {% csrf_token %}
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <ul>
+                {% for item in ls.item_set.all %}
+                     {% if item.complete == True %}
+                         <li><input type="checkbox" value="clicked" name="c{{item.id}}" checked/>{{item.text}}</li>
+                     {% else %}
+                         <li><input type="checkbox" value="clicked" name="c{{item.id}}"/>{{item.text}}</li>
+                     {% endif %}
+                {% endfor %}
+            </ul>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input type="text" name="new">
+                </div>
+                <button type="submit" name="newItem" value="newItem" class="btn btn-success">Add new</button>
+                <button type="submit" name="save" value="save" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

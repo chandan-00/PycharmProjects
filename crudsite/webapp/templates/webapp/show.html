@@ -1,0 +1,17 @@
+{% extends 'webapp/base.html' %}
+{% block title %}
+    List of all updates
+{% endblock %}
+{% block body %}
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">UPDATE LISTS
+</button>
+    {% for list in ls %}
+            <div class="collapse" id="collapseExample">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="{{list.id}}/">{{list.name}}</a>
+                        </li>
+                    </ul>
+            </div>
+    {% endfor %}
+{% endblock %}
