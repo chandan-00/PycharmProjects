@@ -1,0 +1,16 @@
+{% extends 'base_flask.html' %}
+{% block title %}
+Welcome to company portal
+{% endblock %}
+{% block body %}
+<center><p><h1>Hello</h1></p>
+<p><h1>Welcome to company portal</h1></p></center>
+    <center><p>Show all employee details <a href='/data/list'><input type = "button" value="Display"></a></p>
+    <p>Add new member details <a href='/data/create'><input type = "button" value="Add"></a></p></center>
+</form>
+<form action='' method = "POST">
+  <center><p>Show my details <input type = "integer" name = "employee_id" /> <input type = "submit" value="Display"></p>
+   <p>Update my details <input type = "integer" name = "update_id" /> <input type = "submit" value="Update"></p>
+   <p>Delete my details <input type = "integer" name = "delete_id" /> <input type = "submit" value="Delete"></p></center>
+</form>
+{% endblock %}

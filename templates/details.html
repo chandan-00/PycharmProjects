@@ -1,0 +1,24 @@
+{% extends 'base_flask.html' %}
+{% block title %}
+List of all details of employees
+{% endblock %}
+{% block body %}
+<center><table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Position</th>
+    </tr>
+    {% for employee in employees %}
+    <tr>
+        <td>{{employee.employee_id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.position}}</td>
+    </tr>
+    {% endfor %}
+</table>
+    <a href="/"><input type = 'button' value = 'Go back to home page'/></a>
+    </center>
+{% endblock %}

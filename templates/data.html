@@ -1,0 +1,15 @@
+{% extends 'base_flask.html' %}
+{% block title %}
+Displaying details
+{% endblock %}
+{% block body %}
+<h3>Id: </h3>
+<p>{{employee.employee_id}}</p><hr>
+<h3>Name: </h3>
+<p>{{employee.name}}</p><hr>
+<h3>Age: </h3>
+<p>{{employee.age}}</p><hr>
+<h3>Position:</h3>
+<p>{{employee.position}}</p><hr>
+<a href="/"><input type = 'button' value = 'Go back to home page'/></a>
+{% endblock %}

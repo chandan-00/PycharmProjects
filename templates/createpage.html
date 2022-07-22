@@ -1,0 +1,16 @@
+{% extends 'base_flask.html' %}
+{% block title %}
+Creating new employee details
+{% endblock %}
+{% block body %}
+<center>
+<form action='' method = "POST">
+  <p>Employee ID <input type = "integer" name = "employee_id" /></p>
+  <p>Name <input type = "text" name = "name" /></p>
+  <p>Age <input type = "integer" name = "age" /></p>
+  <p>Position <input type = "text" name = "position" /></p>
+  <p><input type = "submit" value = "Submit" /></p>
+  <a href="/"><input type = 'button' value = 'Go back to home page'/></a>
+</form>
+  </center>
+{% endblock %}
