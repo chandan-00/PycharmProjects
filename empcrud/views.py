@@ -13,8 +13,10 @@ from django.contrib import messages
 
 def index(response, id):
     ls = EmpList.objects.get(empid=id)
-    return render(response, 'empcrud/list.html', {'ls': ls})
-
+    if ls:
+        return render(response, 'empcrud/list.html', {'ls': ls})
+    messages.success(response, f"No employee with ID = '{id}'")
+    return render(response, 'empcrud/home.html', {})
 
 def view(response):
     ls = EmpList.objects.all().order_by('empid')
@@ -44,20 +46,26 @@ def create(response):
 def update(response, id):
     emp = EmpList.objects.get(empid=id)
     form = EmployeeUpdateList(response.POST or None, response.FILES or None, instance=emp)
-    if form.is_valid():
-        form.save()
-        messages.success(response, 'Updated successfully!!')
-        return redirect("index", emp.empid)
-    return render(response, "empcrud/update.html", {"form": form, 'emp': emp, })
+    if emp:
+        if form.is_valid():
+            form.save()
+            messages.success(response, 'Updated successfully!!')
+            return redirect("index", emp.empid)
+        return render(response, "empcrud/update.html", {"form": form, 'emp': emp, })
+    messages.success(response, f"No employee with ID = '{id}'")
+    return render(response, 'empcrud/home.html', {})
 
 
 def delete(response, id):
     emp = EmpList.objects.get(empid=id)
-    if response.method == 'POST':
-        emp.delete()
-        messages.success(response, 'Deleted successfully!!')
-        return redirect("/")
-    return render(response, "empcrud/delete.html", {'emp': emp})
+    if emp:
+        if response.method == 'POST':
+            emp.delete()
+            messages.success(response, 'Deleted successfully!!')
+            return redirect("/")
+        return render(response, "empcrud/delete.html", {'emp': emp})
+    messages.success(response, f"No employee with ID = '{id}'")
+    return render(response, 'empcrud/home.html', {})
 
 
 def delete_view(response):
@@ -85,7 +93,10 @@ def update_view(response):
 def search_emp(response):
     searched = response.POST['searched']
     emp = EmpList.objects.filter(name__contains=searched).order_by('empid')
-    return render(response, "empcrud/search_emp.html", {'searched': searched, 'emp': emp, })
+    if emp:
+        return render(response, "empcrud/search_emp.html", {'searched': searched, 'emp': emp, })
+    messages.success(response, f"No employee with '{searched}' in their name")
+    return render(response, 'empcrud/home.html', {})
 
 
 def emp_txt(request):
