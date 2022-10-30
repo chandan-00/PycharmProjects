@@ -5,8 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d380d17-c302-41b1-85a7-378543cb9ff4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md.orig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/README.md.orig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/data.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/flask_crud.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/flask_crud_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/base_flask.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/createpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/datalist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_operations/templates/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_crud.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_crud_app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base_flask.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/createpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/datalist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/update.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
